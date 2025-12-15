@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Emergency Response Dashboard</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@stlite/mountable/build/stlite.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@stlite/mountable/build/stlite.js"></script>
+    <script>
+      stlite.mount(
+        {
+          entrypoint: "app.py",
+          files: { "app.py": { url: "app.py" } },
+          requirements: ["pandas", "altair", "numpy", "openpyxl"],
+        },
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
